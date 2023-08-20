@@ -1,0 +1,44 @@
+﻿<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"] | Healthy Food</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/Logo.png" />
+
+    <!-- CSS files -->
+    <link href="~/css/tabler.min.css?1684106062" rel="stylesheet"/>
+    <link href="~/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
+    <link href="~/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
+    <link href="~/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
+    <link href="~/lib/tabler-icons/webfont/tabler-icons.min.css" rel="stylesheet" />
+    <link href="~/css/demo.min.css?1684106062" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+  </head>
+  <body >
+    <script src="~/js/demo-theme.min.js?1684106062"></script>
+    <div class="page">
+      <!-- Navbar -->
+      @await Html.PartialAsync("_Navbar")
+      <div class="page-wrapper">
+        @RenderBody()
+        
+        @await Html.PartialAsync("_Footer")
+      </div>
+    </div>
+    <!-- Libs JS -->
+    <script src="~/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
+    <script src="~/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
+    <script src="~/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
+    <script src="~/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
+    <!-- Tabler Core -->
+    <script src="~/js/tabler.min.js?1684106062" defer></script>
+    <script src="~/js/demo.min.js?1684106062" defer></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+  </body>
+</html>
+

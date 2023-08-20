@@ -1,0 +1,201 @@
+﻿<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbar"
+                    aria-controls="navbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-house"></i>
+                            Tổng quan
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           role="button"
+                           data-mdb-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fas fa-gear"></i>
+                            Hệ thống
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Nhóm người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Tài khoản người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Phân quyền người dùng</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           role="button"
+                           data-mdb-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fa fa-wrench"></i>
+                            Danh mục
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Categories"
+                                   asp-action="Index">Nhóm hàng hoá</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Hàng hoá</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Đơn vị tính</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           role="button"
+                           data-mdb-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fa fa-warehouse"></i>
+                            Kho hàng
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Nhóm người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Tài khoản người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Phân quyền người dùng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           role="button"
+                           data-mdb-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fa fa-dollar-sign"></i>
+                            Thu/Chi tiền
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Nhóm người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Tài khoản người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Phân quyền người dùng</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-gift"></i>
+                            Khuyến mãi
+                        </a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           role="button"
+                           data-mdb-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            Doanh thu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Nhóm người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Tài khoản người dùng</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Phân quyền người dùng</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+                <!-- Notifications -->
+                <div class="dropdown">
+                    <a class="text-reset me-3 dropdown-toggle hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">0</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Avatar -->
+                <div class="dropdown">
+                    <a class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuAvatar"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-user px-2"></i>
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar">
+                        <li>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+    </nav>
+</header>

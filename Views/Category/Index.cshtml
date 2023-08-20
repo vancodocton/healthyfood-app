@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewData["Title"] = "Danh mục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header d-print-none text-white">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col">
+                <h2 class="page-title">
+                    NHÓM HÀNG HOÁ
+                </h2>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-add-category">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                        Thêm mới
+                    </a>
+                    <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-add-category" aria-label="Thêm mới">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="container-xl">
+        <div class="row row-cards">
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table table-vcenter card-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Mã nhóm hàng</th>
+                                    <th>Tên nhóm hàng</th>
+                                    <th>Mô tả</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-muted">@item.Id</td>
+                                        <td class="text-muted">
+                                            @item.Code
+                                        </td>
+                                        <td class="text-muted">
+                                            @item.Name
+                                        </td>
+                                        <td class="text-muted">
+                                            @item.Description
+                                        </td>
+                                        <td>
+                                            <a href="#"><i class="ti ti-pencil"></i></a>
+                                            <a class="text-danger" href="#"><i class="ti ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="card-title">Tìm kiếm</div>
+                            <div class="row g-2">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Tìm nhóm hàng…">
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#" class="btn btn-icon" aria-label="Button">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-blur fade" id="modal-add-category" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <form method="post" asp-controller="Category" asp-action="Add">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chi tiết nhóm hàng hoá</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="mb-3">
+                            <label class="form-label">Tên nhóm hàng</label>
+                            <input type="text" class="form-control" id="category-name-input" name="Name" placeholder="Nhập tên nhóm hàng..." required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-label">Loại danh mục</div>
+                            <div>
+                                @foreach(var item in ViewBag.CategoryTypes)
+                                {
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="CategoryType.Id" value="@item.Id">
+                                        <span class="form-check-label">@item.Name</span>
+                                    </label>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div>
+                                <label class="form-label">Mô tả</label>
+                                <textarea class="form-control" rows="3" id="category-desc-input" name="Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                        Huỷ
+                    </a>
+
+                    <button type="submit" class="btn btn-primary">
+                        Thêm
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+    </script>
+}

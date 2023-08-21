@@ -31,6 +31,7 @@ namespace asp_dotnet_core_healthyfood_app.Services
         public async Task CreateAsync(CategoryModel category)
         {
             var newCatogory = _mapper.Map<Category>(category);
+            newCatogory.CategoryType = null!;
 
             _context.Categories!.Add(newCatogory);
             await _context.SaveChangesAsync();

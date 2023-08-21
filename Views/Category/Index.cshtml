@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<CategoryModel>
+
+@{
     ViewData["Title"] = "Danh mục";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -51,7 +53,7 @@
                                     <tr>
                                         <td class="text-muted">@item.Id</td>
                                         <td class="text-muted">
-                                            @item.Code
+                                            @* @item.Code *@
                                         </td>
                                         <td class="text-muted">
                                             @item.Name

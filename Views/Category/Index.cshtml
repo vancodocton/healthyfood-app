@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Danh mục";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -115,7 +114,7 @@
                                 @foreach(var item in ViewBag.CategoryTypes)
                                 {
                                     <label class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="CategoryType.Id" value="@item.Id">
+                                        <input class="form-check-input" type="radio" id="CategoryType_Id" name="CategoryType.Id" value="@item.Id">
                                         <span class="form-check-label">@item.Name</span>
                                     </label>
                                 }

@@ -16,6 +16,7 @@ namespace asp_dotnet_core_healthyfood_app.Data
         [StringLength(100)]
         public string? Description { get; set; }
 
+        public int CategoryTypeId { get; set; }
         public CategoryType CategoryType { get; set; } = null!;
     }
 }
